@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +26,13 @@ Route::get('/', function () {
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
-    //
+// Route::group(['middleware' => ['web']], function () {
+//     //
+// });
+
+get('/', function(){
+	return redirect ('/blog');
+
 });
+get ('blog', 'BlogController@index');
+get('blog/{slug}', 'BlogController@showPost');
