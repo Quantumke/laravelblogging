@@ -1,1 +1,1 @@
-# laravelblogging
+# laravelbloggingskillset
